@@ -2,7 +2,7 @@ package conditionalStatement;
 
 public class Conditional {
     public static void main(String[] args) {
-
+        greatestAmongThreeNumbers(1,2,1);
     }
 
     //1. Check Positive or Negative Number
@@ -20,6 +20,26 @@ public class Conditional {
             System.out.println("negative");
         }else {
             System.out.println("numbers in not - " + n);
+        }
+    }
+
+    //3. Find Greatest Among Three Numbers
+    //
+    //Write a Java program that takes three numbers from the user and prints the greatest number.
+    //
+    //Test Data
+    //Input the 1st number: 25
+    //Input the 2nd number: 78
+    //Input the 3rd number: 87
+    //Expected Output :
+    //The greatest: 87
+    public static void greatestAmongThreeNumbers(int a,int b,int c){
+        if (a > b && a > c){
+            System.out.println(a);
+        }else if (b > a && b > c){
+            System.out.println(b);
+        }else {
+            System.out.println(c);
         }
     }
 }
