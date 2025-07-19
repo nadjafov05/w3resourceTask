@@ -272,4 +272,236 @@ public class Conditional {
             System.out.printf("Ədəd: %d və %d-in kubu: %d\n", i, i,( i * i * i));
         }
     }
+
+    //14. Multiplication Table of a Number
+    //
+    //Write a Java program to display the multiplication table of a given integer.
+    //
+    //Test Data
+    //Input the number (Table to be calculated) : Input number of terms : 5
+    //Expected Output :
+    public static void multiplicationTableOfNumber(){
+        int number = 4;
+        for (int i=1;i<=10;i++){
+            String e = String.format("%d" + " * " + "%d" + " = " + "%d",number,i,(number*i));
+            System.out.println(e);
+        }
+    }
+
+
+    //15. Sum of Odd Natural Numbers
+    //
+    //Write a Java program that displays the sum of n odd natural numbers.
+    //
+    //Test Data
+    //Input number of terms is: 5
+    //Expected Output :
+    public static void sumOddNaturalNumbers(){
+        int number = 5;
+        int cem = 0;
+        int say = 0;
+
+        for (int i=1;say < number;i+=2){
+            cem+=i;
+            say ++;
+        }
+        System.out.println(cem);
+    }
+
+    //16. Right-Angle Triangle Number Pattern
+    //
+    //Write a Java program to display the pattern like a right angle triangle with a number.
+    //
+    //Test Data
+    //Input number of rows : 10
+    //Expected Output :
+    //
+    //1
+    //12
+    //123
+    //1234
+    //12345
+    //123456
+    //1234567
+    //12345678
+    //123456789
+    //12345678910
+    public static void rightAngleTriangleNummberPatten(){
+        for (int i=1;i<=10;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+    //17. Right-Angle Triangle Repeating Numbers
+    //
+    //Write a program in Java to make such a pattern like a right angle triangle with a number which repeats a number in a row.
+    //
+    //The pattern is as follows :
+    //
+    //1
+    //22
+    //333
+    //4444
+    public static void ringhtAngleTriangleRepeatingNumber(){
+        for (int i=1;i<=10;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+
+    //21. Display Diamond Pattern
+    //
+    //Write a Java program to display the pattern like a diamond.
+    //
+    //Test Data
+    //Input number of rows (half of the diamond) : 7
+    //Expected Output :
+    public static void displayDiamontPattern(){
+        for (int i=1;i<=5;i++){
+            for (int j=5;j>=i;j--){
+                System.out.print(" ");
+            }
+
+            //*
+            for (int a=1;a<=i;a++){
+                System.out.print("*");
+            }
+
+            for (int l=1;l<=i-1;l++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        //asagi hissesi
+        for (int i=1;i<=5;i++){
+            for (int j=1;j<=i;j++){
+                System.out.print("b");
+            }
+
+            for (int k=5;k>=i;k--){
+                System.out.print("*");
+            }
+
+            for (int l=5;l>=i+1;l--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
+    //23. Reverse * Triangle
+    //
+    //Write a Java program to generate the following * triangles.
+    //
+    //Test Data
+    //Input the number: 6
+    //Expected Output :
+    //
+    //******
+    // *****
+    //  ****
+    //   ***
+    //    **
+    //     *
+
+    public static void reverseTriangle(){
+        for (int i=1;i<=6;i++){
+            for (int l=1;l<=i-1;l++){
+                System.out.print(" ");
+            }
+            for (int k=5;k>=i-1;k--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    //24. Right-Angle Triangle with @ Symbols
+    //
+    //Write a Java program to generate the following @'s triangle.
+    //
+    //Test Data
+    //Input the number: 6
+    //Expected Output :
+    //
+    //      @
+    //     @@
+    //    @@@
+    //   @@@@
+    //  @@@@@
+    // @@@@@@
+    public static void rightAngleTriangleWithSysmvol(){
+        for (int i=1;i<=5;i++){
+            for (int j=5;j>=i;j--){
+                System.out.print(" ");
+            }
+            for (int k=1;k<=i;k++){
+                System.out.print("@");
+            }
+            System.out.println();
+        }
+    }
+
+
+    //29. Count Digits in an Integer
+    //
+    //Write a Java program that reads an positive integer and count the number of digits the number (less than ten billion) has.
+    //
+    //Test Data
+    //Input an integer number less than ten billion: 125463
+    //Expected Output :
+    //
+    //Number of digits in the number: 6
+
+    public static void countDigitsInInteger(){
+        int number = 1234568555;
+        int count = 0;
+
+        while (number!=0){
+            int bolme = number%10;
+            count++;
+            number = number / 10;
+        }
+        System.out.println(count);
+    }
+
+
+
+    //30. Compare Three Numbers (Equal, Different)
+    //
+    //Write a Java program that accepts three numbers and prints "All numbers are equal" if all three numbers are equal, "All numbers are different" if all three numbers are different and "Neither all are equal or different" otherwise.
+    //
+    //Test Data
+    //Input first number: 2564
+    //Input second number: 3526
+    //Input third number: 2456
+    //Expected Output :
+    //
+    //All numbers are different
+    public static void compareThreeNumbers(){
+        int number = 21219;
+        String num = String.valueOf(number);
+        System.out.println(num);
+
+        for (int i=0;i<num.length();i++){
+            char oneNumber = num.charAt(i);
+            char endNumber = num.charAt(num.length()-i-1);
+
+            if (oneNumber == endNumber){
+                System.out.println("bereberdi");
+                return;
+            }else {
+                System.out.println("bereber deyil");
+                return;
+            }
+        }
+    }
+
 }
